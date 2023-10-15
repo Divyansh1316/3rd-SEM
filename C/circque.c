@@ -1,67 +1,66 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define max 3
-int queue[max];
-int rear = -1;
+#define MAX 3
 int front = -1;
-
+int rear = -1;
+int a[MAX];
 void enqueue()
 {
     int ele;
-    if (rear == max - 1)
+    if (front == (rear + 1) % MAX)
     {
-        printf("Overflow\n");
+        printf("Overflow");
     }
     else if (rear == -1)
     {
-        printf("Enter element : ");
+        printf("Enter an element : ");
         scanf("%d", &ele);
         rear = 0;
-        queue[rear] = ele;
         front = 0;
+        a[rear] = ele;
     }
     else
     {
-        rear += 1;
-        printf("Enter element : ");
+        rear = (rear + 1) % MAX;
+        printf("Enter an element : ");
         scanf("%d", &ele);
-        queue[rear] = ele;
+        a[rear] = ele;
     }
 }
-
 void dequeue()
 {
     if (front == -1)
     {
-        printf("Underflow\n");
+        printf("Underflow");
     }
     else if (front == rear)
     {
-        printf("%d", queue[front]);
+        printf("%d", a[front]);
         front = rear = -1;
     }
     else
     {
-        printf("%d", queue[front]);
-        front += 1;
+        printf("%d", a[front]);
+        front = (front + 1) % MAX;
     }
 }
-
 void traverse()
 {
     if (front == -1)
     {
-        printf("Underflow\n");
+        printf("Underflow");
     }
     else
     {
-        for (int i = front; i <= rear; i++)
+        int i = front;
+        while (i != rear)
         {
-            printf("%d ", queue[i]);
+            printf("%d ", a[i]);
+            i = (i + 1) % MAX;
         }
+        printf("%d", a[i]);
     }
 }
-
 void main()
 {
     int ch;
@@ -80,7 +79,7 @@ void main()
         case 3:
             traverse();
             break;
-        default:
+        case 4:
             printf("Invalid choice");
             exit(0);
         }

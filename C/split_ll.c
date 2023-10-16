@@ -60,23 +60,30 @@ sn *traverse(sn *head)
 sn *split(sn *head)
 {
     sn *p = head;
-    sn *p2 = head;
+    sn *p3 = head;
+    sn *p2 = NULL;
     int n,c=1;
     printf("Enter position where u want to split : ");
     scanf("%d",&n);
-    while (c != n)
+    while (c != n+1)
     {
+        p2=p;
         p = p->next;
         c++;
     }
-    p->next=NULL;
-    p=head;
+    p2->next=NULL;
+    while(p3!=NULL)
+    {
+        printf("%d ",p3->info);
+        p3=p3->next;
+    }
+    printf("\t");
+    head=p;
     while(p!=NULL)
     {
-        printf("%d",p->info);
+        printf("%d ",p->info);
         p=p->next;
     }
-    head=p->next;
     return head;
 }
 

@@ -12,7 +12,10 @@ public:
         name = a;
         age = b;
     }
-    void get1() { cout << "NAME IS:  " << name << "  AGE IS:  " << age << endl; }
+    void get1()
+    {
+        cout << "NAME IS:  " << name << "  AGE IS:  " << age << endl;
+    }
 };
 class marks : virtual public stud
 {
@@ -32,7 +35,8 @@ public:
     }
     void get2()
     {
-        cout << "MARKS OF SUB1:  " << mm1 <<endl<< "MARKS OF SUB2:  " << mm2<<endl
+        cout << "MARKS OF SUB1:  " << mm1 << endl
+             << "MARKS OF SUB2:  " << mm2 << endl
              << "MARKS OF SUB3:  " << mm3 << endl;
     }
 };
@@ -46,7 +50,7 @@ public:
     void set3(int a) { sp = a; }
     void get3()
     {
-        cout << "Sports marks : "<<sp<< endl;
+        cout << "Sports marks : " << sp << endl;
     }
 };
 

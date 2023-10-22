@@ -57,3 +57,10 @@ int main()
     ob3.display();
     return 0;
 }
+
+/*
+                            Public Derivation      	Private Derivation    	Protected Derivation
+Private members           	  Not Inherited           Not Inherited            Not Inherited
+Protected members           	Protected               Private                  Protected
+Public members           	     Public	                Private                  Protected
+*/

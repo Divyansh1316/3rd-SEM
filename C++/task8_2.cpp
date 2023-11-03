@@ -1,58 +1,62 @@
 #include <iostream>
 using namespace std;
 
-class CalArea {
-protected:
-    float r, h;
-
+class cal_area
+{
 public:
-    void getdata() {
-        cout << "Enter the values for r and h: ";
+    float r, h;
+    void getdata()
+    {
+        cout << "Enter radius and height : ";
         cin >> r >> h;
     }
-
-    virtual void display_volume() = 0;
+    virtual void display_vol() = 0;
 };
 
-class Cone : public CalArea {
+class cone : public cal_area
+{
 public:
-    void display_volume() {
-        cout << "Volume of cone: " << (1.0 / 3) * 3.141 * r * r * h << endl;
+    void display_vol()
+    {
+        cout << "Volume of cone is : " << 0.33 * 3.14 * r * r * h << endl;
     }
 };
 
-class Hemisphere : public CalArea {
+class hemisphere : public cal_area
+{
 public:
-    void display_volume() {
-        cout << "Volume of hemisphere: " << (2.0 / 3) * 3.141 * r * r * r << endl;
+    void display_vol()
+    {
+        cout << "Volume of hemisphere is : " << 0.67 * 3.14 * r * r * r << endl;
     }
 };
 
-class Cylinder : public CalArea {
+class cylinder : public cal_area
+{
 public:
-    void display_volume() {
-        cout << "Volume of cylinder: " << 3.141 * r * r * h << endl;
+    void display_vol()
+    {
+        cout << "Volume of cylinder is : " << 3.14 * r * r * h << endl;
     }
 };
 
-int main() {
-   CalArea *ptr;
-    Cone c;
-    ptr=&c;
+int main()
+{
+    cal_area *ptr;
+
+    cone ob1;
+    ptr = &ob1;
     ptr->getdata();
-    ptr->display_volume();
+    ptr->display_vol();
 
-    Hemisphere h;
-    ptr=&h;
+    hemisphere ob2;
+    ptr = &ob2;
     ptr->getdata();
-    ptr->display_volume();
+    ptr->display_vol();
 
-
-    Cylinder cy;
-    ptr=&cy;
+    cylinder ob3;
+    ptr = &ob3;
     ptr->getdata();
-    ptr->display_volume();
-;
-
+    ptr->display_vol();
     return 0;
 }

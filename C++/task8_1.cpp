@@ -1,47 +1,50 @@
 #include <iostream>
 using namespace std;
 
-class Shape {
-protected:
-    double x, y;
-
+class shape
+{
 public:
-    void get_data() {
-        cout << "Enter the values for x and y: ";
-        cin >> x >> y;
-    }
-
-    virtual void display_area() {
-        cout << "Area: ";
-    }
+  double x, y;
+  void get_data()
+  {
+    cout << "Enter values of x and y : ";
+    cin >> x >> y;
+  }
+  virtual void display_area()
+  {
+  }
 };
 
-class Triangle : public Shape {
+class triangle : public shape
+{
 public:
-    void display_area() {
-        cout << 0.5 * x * y << endl;
-    }
+  void display_area()
+  {
+    cout << "Area of triangle is : " << 0.5 * x * y << endl;
+  }
 };
 
-class Rectangle : public Shape {
+class rectangle : public shape
+{
 public:
-    void display_area() {
-        cout << x * y << endl;
-    }
+  void display_area()
+  {
+    cout << "Area of rectangle is : " << x * y << endl;
+  }
 };
 
-int main() {
-    Shape *ptr;
-    Triangle t;
-    ptr=&t;
-    ptr->get_data();
-    ptr->display_area();
+int main()
+{
+  shape *ptr;
 
+  triangle ob1;
+  ptr = &ob1;
+  ptr->get_data();
+  ptr->display_area();
 
-    Rectangle r;
-    ptr=&r;
-    ptr->get_data();
-    ptr->display_area();
-
-    return 0;
+  rectangle ob2;
+  ptr = &ob2;
+  ptr->get_data();
+  ptr->display_area();
+  return 0;
 }

@@ -11,6 +11,11 @@ Area of rectangle = x * y
 Area of triangle = ½ *x*y
 */
 
+/*
+Name :Divyansh Dhaundiyal
+Roll no. : 29
+*/
+
 #include <iostream>
 using namespace std;
 

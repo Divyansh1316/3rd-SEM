@@ -6,13 +6,18 @@ and private modes) and shows the access specifier of the members of base class i
 class.(verify and validate access mechanism and validity modes)
 */
 
+/*
+Name :Divyansh Dhaundiyal
+Roll no. : 29
+*/
+
 #include <iostream>
 using namespace std;
 
 class base
 {
 private:
-    int a = 10; // Private member
+    int a = 10;
 
 protected:
     int b = 20;
@@ -26,7 +31,6 @@ class derivedprivate : private base
 public:
     void display()
     {
-        // Private member 'a' cannot be accessed here
         cout << c << b << endl;
     }
 };
@@ -36,7 +40,6 @@ class derivedprotected : protected base
 public:
     void display()
     {
-        // Private member 'a' cannot be accessed here
         cout << c << b << endl;
     }
 };
@@ -46,7 +49,6 @@ class derivedpublic : public base
 public:
     void display()
     {
-        // Private member 'a' cannot be accessed here
         cout << c << b << endl;
     }
 };
@@ -54,11 +56,11 @@ public:
 int main()
 {
     derivedprivate ob1;
-    ob1.display(); // This will result in an error if you try to access 'a' here.
+    ob1.display();
     derivedprotected ob2;
-    ob2.display(); // This will result in an error if you try to access 'a' here.
+    ob2.display();
     derivedpublic ob3;
-    ob3.display(); // This will result in an error if you try to access 'a' here.
+    ob3.display();
     return 0;
 }
 

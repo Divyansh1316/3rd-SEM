@@ -9,6 +9,11 @@ additional surcharge of 15% is added. Implement a C++ Program to read the names 
 and number of units consumed and display the charges with names.
 */
 
+/*
+Name :Divyansh Dhaundiyal
+Roll no. : 29
+*/
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -43,7 +48,8 @@ int main()
             surc = amt * 0.15;
             amt = amt + surc;
         }
-        cout << "Total amount of " << name << " is " << amt << endl;
+        cout << "Total amount of " << name << " is " << amt << endl
+             << endl;
     }
     return 0;
 }

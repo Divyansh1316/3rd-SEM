@@ -8,6 +8,11 @@ should be able to call both the base classes and display their information. Remo
 becalled?) by proper mechanism
 */
 
+/*
+Name :Divyansh Dhaundiyal
+Roll no. : 29
+*/
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -20,7 +25,7 @@ class student
 public:
     void setdata()
     {
-        cout << "Enter detauls of student : " << endl;
+        cout << "Enter details of student : " << endl;
         cout << "Enter name : ";
         getline(cin, name);
         cout << "Enter age : ";
@@ -32,7 +37,7 @@ public:
     }
     void display()
     {
-        cout << "Details of student : " << endl;
+        cout << "\nDetails of student : " << endl;
         cout << "Name : " << name << endl;
         cout << "Age : " << age << endl;
         cout << "Roll no : " << enroll_no << endl;
@@ -48,7 +53,7 @@ class faculty
 public:
     void setdata()
     {
-        cout << "Enter details of factulty : " << endl;
+        cout << "\nEnter details of faculty : " << endl;
         cout << "Enter name : ";
         cin.ignore();
         getline(cin, facultyName);
@@ -69,11 +74,11 @@ public:
     }
     void display()
     {
-        cout << "Details of faculty : " << endl;
+        cout << "\nDetails of faculty : " << endl;
         cout << "Name : " << facultyName << endl;
         cout << "Department : " << dept << endl;
         cout << "Gender : " << gender << endl;
-        cout << "Factulty code : " << facultyCode << endl;
+        cout << "Faculty code : " << facultyCode << endl;
         cout << "Salary : " << salary << endl;
         cout << "Age : " << age << endl;
         cout << "Experience : " << experience << endl;

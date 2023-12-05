@@ -6,6 +6,11 @@ b. Unary ++ preincrement, postincrement
 c. Unary -- predecrement, postdecrement
 */
 
+/*
+Name :Divyansh Dhaundiyal
+Roll no. : 29
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -65,40 +70,32 @@ decr operator-(decr &ob)
 int main()
 {
     decr ob1(5);
-    decr ob2, ob3, ob4, ob5, ob6, ob7, ob8, ob9, ob10;
+    decr ob2, ob3, ob4, ob5, ob6, ob7, ob8, ob9(10), ob10;
 
     cout << "Original Values:" << endl;
     ob1.display();
 
-    // Post-Decrement
     ob2 = ob1--;
     cout << "After Post-Decrement:" << endl;
     ob2.display();
-    ob1.display();
 
-    // Pre-Decrement
     ob3 = --ob1;
     cout << "After Pre-Decrement:" << endl;
     ob3.display();
-    ob1.display();
 
-    // Post-Increment
     ob5 = ob1++;
     cout << "After Post-Increment:" << endl;
     ob5.display();
-    ob1.display();
 
-    // Pre-Increment
     ob7 = ++ob1;
     cout << "After Pre-Increment:" << endl;
     ob7.display();
-    ob1.display();
 
-    // Unary Minus
     ob10 = -ob9;
+    cout << "Before Unary Minus:" << endl;
+    ob9.display();
     cout << "After Unary Minus:" << endl;
     ob10.display();
-    ob9.display();
 
     return 0;
 }

@@ -2,6 +2,11 @@
 Q17. Implement using a proper diagram a real case scenario by a proper C++ code to provide the solution to Diamond Problem in C++(assume the mode of inheritance and accessibility as per your choice)
 */
 
+/*
+Name :Divyansh Dhaundiyal
+Roll no. : 29
+*/
+
 #include <iostream>
 #include <string>
 using namespace std;

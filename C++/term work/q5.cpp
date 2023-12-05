@@ -12,6 +12,10 @@ In the int Student::calculateTotalScore() function, you must return the student'
 the values in scores).
 The code in the editor will determine how many scores are larger than Anna’s and print that number to
 the console.*/
+/*
+Name :Divyansh Dhaundiyal
+Roll no. : 29
+*/
 
 #include <iostream>
 #include <string>

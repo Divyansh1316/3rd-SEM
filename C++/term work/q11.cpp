@@ -7,6 +7,11 @@ initialized values together, leaving the result in the third time variable. Fina
 the value of this third variable.
 */
 
+/*
+Name :Divyansh Dhaundiyal
+Roll no. : 29
+*/
+
 #include <iostream>
 using namespace std;
 

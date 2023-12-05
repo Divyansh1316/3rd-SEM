@@ -12,6 +12,11 @@ Public members
 • Checkout() Function to display Rno, Name, Tariff,
 NOD and Amount (amount to be displayed by calling function) CALC()*/
 
+/*
+Name :Divyansh Dhaundiyal
+Roll no. : 29
+*/
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -61,7 +66,7 @@ int main()
 {
     hotel s;
     s.checkin();
-    cout << "Details : \n";
+    cout << "\nDetails : \n";
     s.checkout();
     float amount = s.calculate();
     cout << amount;

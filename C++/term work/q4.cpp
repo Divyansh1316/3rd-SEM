@@ -11,6 +11,11 @@ Member Functions
 ● To withdraw an amount after checking the balance
 ● To display name and balance*/
 
+/*
+Name :Divyansh Dhaundiyal
+Roll no. : 29
+*/
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -61,12 +66,12 @@ void bank ::calc()
     }
     else
     {
-        cout << "Insufficient balance";
+        cout << "Insufficient balance\n";
     }
 }
 void bank ::disp()
 {
-    cout << "Name : " << name << "\n";
+    cout << "\nName : " << name << "\n";
     cout << "Balance is :" << bal << "\n";
     cout << "Account number : " << acc << "\n";
     cout << "Account type : " << type << "\n";

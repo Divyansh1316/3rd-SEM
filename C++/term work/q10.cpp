@@ -7,6 +7,11 @@ function. If Father name and Mother Name of both classes are equal then print th
 “We are brother and sister”, otherwise print the message “Belongs to different Family”.
 */
 
+/*
+Name :Divyansh Dhaundiyal
+Roll no. : 29
+*/
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -35,7 +40,7 @@ public:
         cin >> Gender;
     }
 
-    friend void comp(UserOne &ob1, UserTwo &ob2);
+    friend void Userchecker(UserOne &ob1, UserTwo &ob2);
 };
 
 class UserTwo
@@ -60,10 +65,10 @@ public:
         cin >> Gender;
     }
 
-    friend void comp(UserOne &ob1, UserTwo &ob2);
+    friend void Userchecker(UserOne &ob1, UserTwo &ob2);
 };
 
-void comp(UserOne &ob1, UserTwo &ob2)
+void Userchecker(UserOne &ob1, UserTwo &ob2)
 {
     if (ob1.FatherName == ob2.FatherName && ob1.MotherName == ob2.MotherName)
     {
@@ -98,7 +103,7 @@ int main()
     cout << "Enter details for UserTwo:" << endl;
     ob2.InputInfo();
 
-    comp(ob1, ob2);
+    Userchecker(ob1, ob2);
 
     return 0;
 }

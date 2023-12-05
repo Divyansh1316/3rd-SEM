@@ -9,6 +9,12 @@ the user to push one key to count a paying car and another to count a non paying
 the ESC key should cause the program to print out the total number of cars and total cash and
 then exit.
 */
+
+/*
+Name :Divyansh Dhaundiyal
+Roll no. : 29
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -62,13 +68,13 @@ int main()
             ob.nonPayCar();
             cout << "Counted a non-paying car." << endl;
             break;
-        case 27:
+        case 'D':
             cout << "Exiting" << endl;
             break;
         default:
             cout << "Invalid Output" << endl;
         }
-    } while (key != 27);
+    } while (key != 'D');
 
     ob.display();
     return 0;

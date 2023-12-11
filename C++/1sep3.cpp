@@ -14,37 +14,38 @@ The code in the editor will determine how many scores are larger than Anna’s a
 the console.*/
 
 #include <iostream>
+#include <string>
 using namespace std;
 class student
 {
-    char name[20];
+    string name;
     int scores[5];
 
 public:
     void input();
-    int calculateTotalScore();
-} s[2];
+    int calculateTotalScore(int);
+};
 void student ::input()
 {
     cout << "Enter details of student :\n";
-    getchar();
+    cin.ignore();
     cout << "Enter name : ";
-    cin.getline(name, sizeof(name));
+    getline(cin, name);
     cout << "Enter marks in 5 subjects : ";
     for (int j = 0; j < 5; j++)
     {
         cin >> scores[j];
     }
 }
-int student ::calculateTotalScore()
+int student ::calculateTotalScore(int suma)
 {
-    int orig = 495, sum = 0;
+    int sum = 0;
     for (int j = 0; j < 5; j++)
     {
         sum += scores[j];
     }
     cout << "Sum of scores is : " << sum << "\n";
-    if (sum > orig)
+    if (sum > suma)
     {
         return 1;
     }
@@ -53,12 +54,24 @@ int student ::calculateTotalScore()
 int main()
 {
     int n, c = 0;
+    int anna[5], suma = 0;
+    cout << "Enter Anna's marks in 5 subjects : ";
+    for (int j = 0; j < 5; j++)
+    {
+        cin >> anna[j];
+    }
+    for (int j = 0; j < 5; j++)
+    {
+        suma += anna[j];
+    }
+    cout << "Anna's marks are :" << suma << endl;
     cout << "Enter number of students : ";
     cin >> n;
+    student s[n];
     for (int i = 0; i < n; i++)
     {
         s[i].input();
-        c += s[i].calculateTotalScore();
+        c += s[i].calculateTotalScore(suma);
     }
     cout << "Number of students having marks higher than Anna are : " << c << "\n";
 }

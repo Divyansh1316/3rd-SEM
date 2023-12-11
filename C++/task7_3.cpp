@@ -1,4 +1,6 @@
-// Diamond problem
+/*
+3. Implement using a proper diagram a real case scenario by a proper C++ code to provide the solution to Diamond Problem in C++(assume the mode of inheritance and accessibility as per your choice)
+*/
 
 #include <iostream>
 #include <string>

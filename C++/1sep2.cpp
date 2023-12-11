@@ -12,12 +12,13 @@ Member Functions
 ● To display name and balance*/
 
 #include <iostream>
+#include <string>
 using namespace std;
 class bank
 {
-    char name[20];
+    string name;
     int acc;
-    char type[20];
+    string type;
     int bal;
     int amount;
     int with;
@@ -32,12 +33,12 @@ void bank ::read()
 {
     cout << "Enter details :\n";
     cout << "Enter name : ";
-    cin.getline(name, sizeof(name));
+    getline(cin, name);
     cout << "Enter account number : ";
     cin >> acc;
-    getchar();
+    cin.ignore();
     cout << "Enter type : ";
-    cin.getline(type, sizeof(type));
+    getline(cin, type);
     cout << "Enter balance : ";
     cin >> bal;
 }

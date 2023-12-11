@@ -1,4 +1,4 @@
-/* Q1.Define a class Hotel in C++ with the following specifications
+/* Q3.Define a class Hotel in C++ with the following specifications
  Private members
 • Rno Data member to store room number
 • Name Data member to store customer name
@@ -11,6 +11,11 @@ Public members
 • Checkin() Function to enter the content Rno, Name, Tariff and NOD
 • Checkout() Function to display Rno, Name, Tariff,
 NOD and Amount (amount to be displayed by calling function) CALC()*/
+
+/*
+Name :Divyansh Dhaundiyal
+Roll no. : 29
+*/
 
 #include <iostream>
 #include <string>
@@ -54,14 +59,14 @@ public:
     }
     float calculate()
     {
-        return calc();
+        cout << amount;
     }
 };
 int main()
 {
     hotel s;
     s.checkin();
-    cout << "Details : \n";
+    cout << "\nDetails : \n";
     s.checkout();
     float amount = s.calculate();
     cout << amount;

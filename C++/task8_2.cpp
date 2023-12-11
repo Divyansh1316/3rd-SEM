@@ -35,7 +35,7 @@ class cone : public cal_area
 public:
     void display_vol()
     {
-        cout << "Volume of cone is : " << 0.33 * 3.14 * r * r * h << endl;
+        cout << "Volume of cone is : " << (1.0 / 3) * 3.14 * r * r * h << endl;
     }
 };
 
@@ -44,7 +44,7 @@ class hemisphere : public cal_area
 public:
     void display_vol()
     {
-        cout << "Volume of hemisphere is : " << 0.67 * 3.14 * r * r * r << endl;
+        cout << "Volume of hemisphere is : " << (2.0 / 3) * 3.14 * r * r * r << endl;
     }
 };
 
@@ -59,21 +59,16 @@ public:
 
 int main()
 {
-    cal_area *ptr;
+    cal_area *ptr1 = new cone();
+    ptr1->getdata();
+    ptr1->display_vol();
 
-    cone ob1;
-    ptr = &ob1;
-    ptr->getdata();
-    ptr->display_vol();
+    cal_area *ptr2 = new hemisphere();
+    ptr2->getdata();
+    ptr2->display_vol();
 
-    hemisphere ob2;
-    ptr = &ob2;
-    ptr->getdata();
-    ptr->display_vol();
-
-    cylinder ob3;
-    ptr = &ob3;
-    ptr->getdata();
-    ptr->display_vol();
+    cal_area *ptr3 = new cylinder();
+    ptr3->getdata();
+    ptr3->display_vol();
     return 0;
 }

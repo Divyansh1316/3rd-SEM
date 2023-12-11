@@ -113,7 +113,7 @@ public:
     friend neg operator-(neg &ob);
 };
 
-neg operator-(neg &ob) // in unary operation no need to pass object as argument
+neg operator-(neg &ob)
 {
     neg temp;
     temp.a = -ob.a;

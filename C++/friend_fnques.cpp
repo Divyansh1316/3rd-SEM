@@ -73,7 +73,6 @@ complex swap(complex &ob1, complex &ob2)
     int temp = ob1.a;
     ob1.a = ob2.a;
     ob2.a = temp;
-    return temp;
 }
 
 int main()
@@ -83,7 +82,7 @@ int main()
     cout << "Before swapping : " << endl;
     ob1.display();
     ob2.display();
-    complex res = swap(ob1, ob2);
+    swap(ob1, ob2);
     cout << "After swapping : " << endl;
     ob1.display();
     ob2.display();

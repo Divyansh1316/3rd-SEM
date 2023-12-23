@@ -14,25 +14,29 @@ using namespace std;
 class A
 {
 public:
-    A()
+    int a;
+    A(int x)
     {
-        cout << "A's constuctor called" << endl;
+        a = x;
+        cout << "A's constuctor called" << a << endl;
     }
 };
 
 class B
 {
 public:
-    B()
+    int b;
+    B(int y)
     {
-        cout << "B's constuctor called" << endl;
+        b = y;
+        cout << "B's constuctor called" << b << endl;
     }
 };
 
 class C : public B, public A // If we make A as vitual then A's constructor will be called first
 {
 public:
-    C() : A(), B()
+    C(int x, int y) : A(x), B(y)
     {
         cout << "C's constuctor called" << endl;
     }
@@ -40,6 +44,6 @@ public:
 
 int main()
 {
-    C ob;
+    C ob(10, 25);
     return 0;
 }

@@ -11,8 +11,9 @@ def fun(a):
     if a<4:
         b=a/(a-3)
     print("value of b",b)
+    print(c) #nameError:trying to access variable which isnt defined
 try:
-    fun(3) #if this line is commented then NameError will occur
+    fun(3) 
     fun(5)
 except ZeroDivisionError:
     print("Denominator cant be zero")    

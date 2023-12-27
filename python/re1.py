@@ -16,7 +16,7 @@
 
 # import re
 # a="aaasdkob my name is hi asab"
-# b=re.findall(r"\w+b",a)
+# b=re.findall(r"a\w+b",a)
 # print(b)
 
 #Write a Python program to replace all occurrences of space comma, or dot with a colon.
